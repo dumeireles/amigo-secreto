@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    --cor-primaria: #101010;
+    --cor-secundaria: #cdc9b9;
+    --cor-tercearia: #c4ff58;
+    --botao-hover: #2a2c29;
+
+    --fonte-titulo: "Caprasimo", serif;
+    --fonte-texto: "Red Hat Display", sans-serif;
+    --fonte-formulario: "Red Hat Display", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background-color: var(--cor-primaria);
+}
+.titulo{
+    font-family: var(--cor-secundaria);
+    font-size: 30%;
+}
+.aparencia__geral{
+
+}
