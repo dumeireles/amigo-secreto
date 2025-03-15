@@ -10,23 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <title class="titulo">SELETOR AUTOMÁTICO DE ELEMENTOS ALEATÓRIOS INDIVIDUAIS</title>
+    <title class="titulo">Oracle One + Alura</title>
+    <link rel="icon" href="/elements/favicon.ico" type="image/png">
 </head>
-
 <body class="body">
     <header class="cabecalho">
         <h1>SELETOR AUTOMÁTICO DE ELEMENTOS INDIVIDUAIS ALEATÓRIOS</h1>
-        <h4 class="cabecalho__subtitulo">Versão 3.12._teste_final_V4 - Sorteo Amici Segreti</h4>
+        <h4 class="cabecalho__subtitulo">Versão 3.12._teste_final_V4 - Sorteoi</h4>
+        <img >
     </header>
-    
-    <div class="container">
+        <div>
+            <input type="text" id="nomeInput" placeholder="Digite um nome">
+            <button onclick="adicionarNome()">Adicionar</button>
+            <button onclick="finalizarInput()">Pronto!</button>
+            <button onclick="recomecar()">Recomeçar</button>
+        </div>
+
+        <div id="listaNomes" class="caixa">
+            <h2>Lista de Nomes:</h2>
+            <ul id="lista"></ul>
+        </div>
+
+        <a href="resultados.html">Ir para Resultados</a>
+        <a href="instrucoes.html">Instruções</a>
+
+        <script src="app.js"></script>
+        <!-- <div class="container">
         <div class="container__conteudo">
             <div class="container__informacoes">
                 <div class="container__texto">
                     <h1></h1>
                     <p class="texto__paragrafo"></p>
                 </div>
-                <input type="number" min="1" max="10" class="container__input">
+                <input type="text" class="container__input">
                 <div class="chute container__botoes">
                     <button onclick="verificarChute()" class="container__botao">Chutar</button>
                     <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
@@ -34,7 +50,7 @@
             </div>
             <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
         </div>
-    </div>
+    </div> -->
 
 
 

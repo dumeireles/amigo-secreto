@@ -16,21 +16,21 @@
     margin: 0;
     padding: 0;
 }
-.body{
+body {
     background-color: var(--cor-primaria);
     width: 100%;
     display: flex;
     align-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 50px;
 }
-.cabecalho{
+.cabecalho {
     font-family: var(--fonte-titulo);
     font-optical-sizing: auto;
     font-size: 50px;
     color: var(--cor-tercearia);
-    
-        padding: 5% 0 0 15%;
+    padding: 5% 0 0 0; /* Ajuste o padding ou use valores mais equilibrados */
     text-align: center;
     gap: 10px;
 }
@@ -39,10 +39,11 @@
     color: var(--cor-secundaria);
     font-size: 15px;
 }
-.titulo{
-    font-family: var(--cor-secundaria);
+.titulo {
+    font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */
     font-size: 30%;
 }
+
 /* .aparencia__geral{
 
 } */
