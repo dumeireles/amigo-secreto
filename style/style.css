@@ -177,12 +177,13 @@
 }
 .caixa {
     background-color: white;
-    padding: 30px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     width: 80%;
     max-width: 600px;
+
 }
 .caixa__subtitulo{
     font-family: var(--fonte-texto);
@@ -209,4 +210,13 @@
     border-radius: 5px;
     font-size: 1.2em;
     text-align: center;
+}
+.footer{
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-tercearia);
+    padding: 15px;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    width: 100%;
 }
