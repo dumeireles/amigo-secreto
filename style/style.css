@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .menu-fixo {
@@ -76,58 +77,43 @@
     padding: 3px;
     width: 100%;
     
-}
-.titulo {
-    font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */
-    font-size: 30%;
-}
-.caixa {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    width: 80%;
-    max-width: 600px;
-}
 
-#listaNomes h2 {
-    text-align: center;
-    font-size: 1.5em;
 }
-
-/* Estilo da lista de nomes */
-#lista {
+.container__botoes {
     display: flex;
-    flex-wrap: wrap;   /* Garante que os nomes não ultrapassem a largura */
-    justify-content: flex-start;
-    gap: 10px;         /* Espaçamento entre os nomes */
-}
-
-#lista div {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2em;
-    text-align: center;
-}
-.container__botoes{
+    margin: auto;
     position: sticky;
+    font-family: var(--fonte-formulario);
     top: 0.9735rem;
-    background-color: var(--cor-secundaria);
+    width: 56.25rem;
+    background-color: var(--cor-tercearia);
     padding: 10px 20px;
     border-radius: 5px;
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+}
+.container__botoes a {
+    background-color: var(--cor-secundaria);
+    position: relative;
+    left: 30px;
+
+}
+.container__botoes a:hover{
+    background-color: var(--cor-secundaria);
+
 }
 .container__botoes__input__nome{
-    
-    font-family: var(--fonte-formulario);
+    background-color: var(--cor-primaria);
     font-size: 20px;
     align-items: center;
+}
+.container__botoes__input__nome input::placeholder {
+    color: var(--cor-tercearia);
+    width: 50%;
+    font-style: italic; /* Deixa o texto em itálico */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    opacity: 1;
 }
 .container__botoes__pronto{
     background-color: var(--cor-secundaria);
@@ -182,5 +168,40 @@
     font-weight: bold;
     color: var(--cor-tercearia);
     min-width: 150px;
+    text-align: center;
+}
+.titulo {
+    font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */
+    font-size: 30%;
+}
+.caixa {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#listaNomes h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Estilo da lista de nomes */
+#lista {
+    display: flex;
+    flex-wrap: wrap;   /* Garante que os nomes não ultrapassem a largura */
+    justify-content: flex-start;
+    gap: 10px;         /* Espaçamento entre os nomes */
+}
+
+#lista div {
+    background-color: var(--cor-tercearia);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
     text-align: center;
 }
