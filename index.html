@@ -14,11 +14,16 @@
     <link rel="icon" href="/elements/favicon.ico" type="image/png">
 </head>
 <body class="body">
+    <div class="menu-fixo">
+        <a href="javascript:void(0);" onclick="zerarLista()">Início</a>
+        <a href="instrucoes.html">Regras</a>
+    </div>
     <header class="cabecalho">
         <h1>SELETOR AUTOMÁTICO DE ELEMENTOS INDIVIDUAIS ALEATÓRIOS</h1>
         <h4 class="cabecalho__subtitulo">Versão 3.12._teste_final_V4 - Sorteoi</h4>
-        <img >
+        <img class="line__roleta" src="elements/line_roleta.png">
     </header>
+        <div class="linha__separadora"></div>
         <div>
             <input type="text" id="nomeInput" placeholder="Digite um nome">
             <button onclick="adicionarNome()">Adicionar</button>
@@ -30,10 +35,6 @@
             <h2>Lista de Nomes:</h2>
             <ul id="lista"></ul>
         </div>
-
-        <a href="resultados.html">Ir para Resultados</a>
-        <a href="instrucoes.html">Instruções</a>
-
         <script src="app.js"></script>
         <!-- <div class="container">
         <div class="container__conteudo">
@@ -51,10 +52,6 @@
             <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
         </div>
     </div> -->
-
-
-
-
     <script src="app.js" defer></script>
 </body>
 

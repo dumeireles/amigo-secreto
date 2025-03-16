@@ -16,7 +16,36 @@
     margin: 0;
     padding: 0;
 }
-body {
+
+.menu-fixo {
+    position: sticky;
+    top: 0.9735rem;
+    background-color: var(--cor-tercearia);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.menu-fixo a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-fixo a:hover {
+    background-color: var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--cor-tercearia);
+    
+}
+.body {
     background-color: var(--cor-primaria);
     width: 100%;
     display: flex;
@@ -32,12 +61,21 @@ body {
     color: var(--cor-tercearia);
     padding: 5% 0 0 0; /* Ajuste o padding ou use valores mais equilibrados */
     text-align: center;
-    gap: 10px;
 }
 .cabecalho__subtitulo{
     font-family: var(--fonte-formulario);
     color: var(--cor-secundaria);
     font-size: 15px;
+}
+.line__roleta{
+    width: 80%;
+    padding: 40px 0 0 0;
+}
+.linha__separadora{
+    background-color: var(--cor-tercearia);
+    padding: 3px;
+    width: 100%;
+    
 }
 .titulo {
     font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */

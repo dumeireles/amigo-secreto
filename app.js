@@ -20,6 +20,13 @@ function adicionarNome() {
     }
 }
 
+// Função para zerar a lista e redirecionar para a página index
+function zerarLista() {
+    localStorage.removeItem('nomes'); // Limpa a lista salva no localStorage
+    window.location.href = 'index.html'; // Redireciona para a página index
+}
+
+
 // Atualiza a lista na tela
 function atualizarLista() {
     const lista = document.getElementById('lista');
@@ -46,19 +53,27 @@ function finalizarInput() {
 }
 
 // Sorteia um nome da lista
+// Função para sortear um nome da lista e removê-lo
 function sortear() {
-    const nomesSalvos = JSON.parse(localStorage.getItem('nomes')) || [];
-    
+    // Obter a lista de nomes do localStorage
+    let nomesSalvos = JSON.parse(localStorage.getItem('nomes')) || [];
+
     if (nomesSalvos.length > 0) {
+        // Sorteia um nome aleatório da lista
         const sorteadoIndex = Math.floor(Math.random() * nomesSalvos.length);
         const nomeSorteado = nomesSalvos[sorteadoIndex];
         
+        // Exibe o nome sorteado no alert
         alert(`Nome sorteado: ${nomeSorteado}`);
         
-        // Excluir o nome sorteado da lista
+        // Remove o nome sorteado da lista
         nomesSalvos.splice(sorteadoIndex, 1);
-        localStorage.setItem('nomes', JSON.stringify(nomesSalvos)); // Atualizar lista no localStorage
+        
+        // Atualiza a lista no localStorage
+        localStorage.setItem('nomes', JSON.stringify(nomesSalvos));
     } else {
+        // Se a lista estiver vazia, exibe uma mensagem de alerta
         alert('Nenhum nome disponível para sortear.');
     }
 }
+
