@@ -85,3 +85,34 @@
     font-family: var(--fonte-formulario);
     font-size: 20px;
 }
+.caixa {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#listaNomes h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Estilo da lista de nomes */
+#lista {
+    display: flex;
+    flex-wrap: wrap;   /* Garante que os nomes não ultrapassem a largura */
+    justify-content: flex-start;
+    gap: 10px;         /* Espaçamento entre os nomes */
+}
+
+#lista div {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}

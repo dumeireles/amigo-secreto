@@ -1,5 +1,5 @@
 // Função para adicionar nome na lista
-let nomes = [];
+let nomes = JSON.parse(localStorage.getItem('nomes')) || [];
 
 // Função para adicionar nome na lista com verificação de duplicidade
 function adicionarNome() {
@@ -13,12 +13,14 @@ function adicionarNome() {
         } else {
             nomes.push(nome); // Adiciona o nome se não for duplicado
             nomeInput.value = ''; // Limpar o campo de input
-            atualizarLista(); // Atualizar a lista na tela
+            localStorage.setItem('nomes', JSON.stringify(nomes)); // Atualiza o localStorage
+            atualizarLista(); // Atualiza a lista na tela
         }
     } else {
         alert('Por favor, insira um nome.');
     }
 }
+
 document.getElementById('nomeInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         adicionarNome();  // Chama a função adicionarNome quando Enter é pressionado
@@ -28,35 +30,40 @@ document.getElementById('nomeInput').addEventListener('keypress', function(event
 // Função para zerar a lista e redirecionar para a página index
 function zerarLista() {
     localStorage.removeItem('nomes'); // Limpa a lista salva no localStorage
+    nomes = []; // Limpa a lista interna de nomes
+    atualizarLista(); // Atualiza a lista na tela
     window.location.href = 'index.html'; // Redireciona para a página index
 }
-
 
 // Atualiza a lista na tela
 function atualizarLista() {
     const lista = document.getElementById('lista');
+    const listaNomes = document.getElementById('listaNomes');
+    
     lista.innerHTML = ''; // Limpar lista atual
 
-    nomes.forEach((nome, index) => {
-        const li = document.createElement('li');
-        li.textContent = nome;
-        lista.appendChild(li);
-    });
+    if (nomes.length > 0) {
+        // Exibe a caixa de lista de nomes
+        listaNomes.style.display = 'block';
+
+        // Preenche a lista com os nomes
+        nomes.forEach((nome) => {
+            const nomeElemento = document.createElement('div');
+            nomeElemento.textContent = nome;
+            lista.appendChild(nomeElemento);
+        });
+    } else {
+        // Se não houver nomes, a caixa de lista de nomes fica invisível
+        listaNomes.style.display = 'none';
+    }
 }
+
 // Função para apagar o último nome da lista
 function apagarUltimoNome() {
-    // Recuperar a lista de nomes do localStorage
-    let nomesSalvos = JSON.parse(localStorage.getItem('nomes')) || [];
-
-    if (nomesSalvos.length > 0) {
-        // Remove o último nome da lista
-        nomesSalvos.pop();
-
-        // Atualiza o localStorage com a lista modificada
-        localStorage.setItem('nomes', JSON.stringify(nomesSalvos));
-
-        // Atualiza a lista na tela
-        atualizarLista();
+    if (nomes.length > 0) {
+        nomes.pop(); // Remove o último nome
+        localStorage.setItem('nomes', JSON.stringify(nomes)); // Atualiza o localStorage
+        atualizarLista(); // Atualiza a lista na tela
     } else {
         alert('Não há nomes para apagar!');
     }
@@ -83,21 +90,31 @@ function sortear() {
     let nomesSalvos = JSON.parse(localStorage.getItem('nomes')) || [];
 
     if (nomesSalvos.length > 0) {
-        // Sorteia um nome aleatório da lista
-        const sorteadoIndex = Math.floor(Math.random() * nomesSalvos.length);
-        const nomeSorteado = nomesSalvos[sorteadoIndex];
-        
+        // Sorteia o nome da lista
+        const nomeSorteado = nomesSalvos.pop(); // Remove o último nome da lista
+
         // Exibe o nome sorteado no alert
         alert(`Nome sorteado: ${nomeSorteado}`);
-        
-        // Remove o nome sorteado da lista
-        nomesSalvos.splice(sorteadoIndex, 1);
-        
-        // Atualiza a lista no localStorage
+
+        // Atualiza a lista no localStorage após remoção do nome sorteado
         localStorage.setItem('nomes', JSON.stringify(nomesSalvos));
+
+        // Atualiza a lista na tela
+        atualizarLista();
+
+        // Caso a lista de nomes esteja vazia após o sorteio, redireciona para farewell.html
+        if (nomesSalvos.length === 0) {
+            // Aguarda o usuário fechar o alert para redirecionar para farewell.html
+            setTimeout(() => {
+                window.location.href = 'farewell.html'; // Redireciona para farewell.html
+            }, 500); // Aguarda 500ms antes de redirecionar
+        }
     } else {
         // Se a lista estiver vazia, exibe uma mensagem de alerta
         alert('Nenhum nome disponível para sortear.');
     }
 }
 
+
+// Atualiza a lista ao carregar a página
+window.onload = atualizarLista;
