@@ -133,18 +133,18 @@
 /* ADICIONANDO O AJUSTE DO CHATGPT */
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
+    text-align: center;
     gap: 15px;
-
     
 }
 
 .sorteio-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -155,6 +155,9 @@
     font-size: 18px;
     padding: 10px 20px;
     background-color: var(--cor-tercearia);
+    display: flex;
+    align-content: center;
+    align-items: center;
     color: var(--cor-primaria);
     border: none;
     border-radius: 5px;
