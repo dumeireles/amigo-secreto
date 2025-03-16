@@ -6,7 +6,7 @@ const nomeInput = document.getElementById('nomeInput');
 
 if (nomeInput) {
     function adicionarNome() {
-        const nome = nomeInput.value.trim();
+        const nome = nomeInput.value.trim().toUpperCase();
 
         if (nome) {
             if (nomes.includes(nome)) {

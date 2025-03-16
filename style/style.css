@@ -58,7 +58,7 @@
 .cabecalho {
     font-family: var(--fonte-titulo);
     font-optical-sizing: auto;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--cor-tercearia);
     padding: 5% 0 0 0; /* Ajuste o padding ou use valores mais equilibrados */
     text-align: center;
@@ -70,22 +70,23 @@
 }
 .line__roleta{
     width: 80%;
-    padding: 40px 0 0 0;
+    padding: 40px 0 0;
 }
-.linha__separadora{
+/* .linha__separadora{
     background-color: var(--cor-tercearia);
     padding: 3px;
     width: 100%;
-}
+} */
 .container__botoes {
     font-family: var(--fonte-formulario);
     background-color: var(--cor-tercearia);
-    padding: 15px 100px;
+    padding: 15px 50px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     font-size: 15px;
     text-align: center;
+    align-items: center;
     justify-content: space-between;
     gap: 10px;
     align-content: space-evenly;
@@ -93,19 +94,21 @@
 .container__botoes a {
     background-color: var(--cor-primaria);
     border-radius: 5px;
-    position: relative;
+    position: center;
     left: 30px;
     color: var(--cor-tercearia);
-    padding: 5px;
+    padding: 10px;
 
 }
 .container__botoes a:hover{
     background-color: var(--cor-secundaria);
-    color: var(--cor-primaria)
+    color: var(--cor-primaria);
+    transition: background-color 0.3s;
 
 }
 .container__botoes__input__nome input{
     font-size: 18px;
+    width: 350px;
     font-family: var(--fonte-texto);
 }
 .container__botoes__input__nome input::placeholder {
@@ -116,14 +119,14 @@
 .container__botoes__input__nome input:focus{
     color: var(--cor-tercearia);
     background-color: var(--cor-primaria);
-    width: auto;
+    /* width: auto; */
 }
-.container__botoes__pronto{
-    font-family: var(--fonte-formulario);
+.container__botoes__pronto {
+    width: 50px;
+    padding: 15px;
 }
-.container__botoes__reset{
-
-    align-items: center;
+.container__botoes__reset {
+    padding: 5px 0;
     
 }
 
@@ -183,6 +186,8 @@
     margin-top: 20px;
     width: 80%;
     max-width: 600px;
+    display: flex;
+    gap: 10px;
 
 }
 .caixa__subtitulo{
@@ -218,5 +223,5 @@
     padding: 15px;
     font-family: var(--fonte-texto);
     font-weight: 400;
-    width: 100%;
+    max-width: 100%;
 }
