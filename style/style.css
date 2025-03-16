@@ -116,3 +116,45 @@
     font-size: 1.2em;
     text-align: center;
 }
+
+/* ADICIONANDO O AJUSTE DO CHATGPT */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sorteio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px;
+}
+
+.botao {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--cor-tercearia);
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--botao-hover);
+    color: white;
+}
+
+.cabecalho__nome {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-tercearia);
+    min-width: 150px;
+    text-align: center;
+}
