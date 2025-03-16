@@ -81,10 +81,6 @@
     font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */
     font-size: 30%;
 }
-.input__nome{
-    font-family: var(--fonte-formulario);
-    font-size: 20px;
-}
 .caixa {
     background-color: white;
     padding: 30px;
@@ -116,14 +112,44 @@
     font-size: 1.2em;
     text-align: center;
 }
+.container__botoes{
+    position: sticky;
+    top: 0.9735rem;
+    background-color: var(--cor-secundaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+.container__botoes__input__nome{
+    
+    font-family: var(--fonte-formulario);
+    font-size: 20px;
+    align-items: center;
+}
+.container__botoes__pronto{
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-formulario);
+    font-size: 20px;
+}
+.container__botoes__reset{
+    background-color: var(--botao-hover);
+    align-items: center;
+    
+}
 
 /* ADICIONANDO O AJUSTE DO CHATGPT */
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    gap: 15px;
+
+    
 }
 
 .sorteio-container {
