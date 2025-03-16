@@ -19,6 +19,11 @@ function adicionarNome() {
         alert('Por favor, insira um nome.');
     }
 }
+document.getElementById('nomeInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        adicionarNome();  // Chama a função adicionarNome quando Enter é pressionado
+    }
+});
 
 // Função para zerar a lista e redirecionar para a página index
 function zerarLista() {
@@ -38,6 +43,25 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+// Função para apagar o último nome da lista
+function apagarUltimoNome() {
+    // Recuperar a lista de nomes do localStorage
+    let nomesSalvos = JSON.parse(localStorage.getItem('nomes')) || [];
+
+    if (nomesSalvos.length > 0) {
+        // Remove o último nome da lista
+        nomesSalvos.pop();
+
+        // Atualiza o localStorage com a lista modificada
+        localStorage.setItem('nomes', JSON.stringify(nomesSalvos));
+
+        // Atualiza a lista na tela
+        atualizarLista();
+    } else {
+        alert('Não há nomes para apagar!');
+    }
+}
+
 // Limpa a lista de nomes
 function recomecar() {
     nomes = []; 

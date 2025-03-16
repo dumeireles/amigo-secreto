@@ -81,7 +81,7 @@
     font-family: var(--fonte-titulo); /* Use uma fonte definida, como var(--fonte-titulo) */
     font-size: 30%;
 }
-
-/* .aparencia__geral{
-
-} */
+.input__nome{
+    font-family: var(--fonte-formulario);
+    font-size: 20px;
+}

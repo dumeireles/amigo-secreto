@@ -24,12 +24,19 @@
         <img class="line__roleta" src="elements/line_roleta.png">
     </header>
         <div class="linha__separadora"></div>
-        <div>
-            <input type="text" id="nomeInput" placeholder="Digite um nome">
-            <button onclick="adicionarNome()">Adicionar</button>
-            <button onclick="finalizarInput()">Pronto!</button>
-            <button onclick="recomecar()">Recomeçar</button>
-        </div>
+        <section class="container__botoes">
+            <div>
+                <input class="input__nome" type="text" id="nomeInput" placeholder="Digite um nome">
+                <button onclick="adicionarNome()">Adicionar</button>
+            </div>
+            <div>
+                <button onclick="finalizarInput()">Pronto!</button>
+            </div>
+            <div>
+                <button onclick="recomecar()">Recomeçar</button>
+                <button onclick="apagarUltimoNome()">Apagar Último Nome</button>
+            </div>
+        </section>
 
         <div id="listaNomes" class="caixa">
             <h2>Lista de Nomes:</h2>
