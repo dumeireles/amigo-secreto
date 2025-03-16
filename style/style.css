@@ -76,52 +76,53 @@
     background-color: var(--cor-tercearia);
     padding: 3px;
     width: 100%;
-    
-
 }
 .container__botoes {
-    display: flex;
-    margin: auto;
-    position: sticky;
     font-family: var(--fonte-formulario);
-    top: 0.9735rem;
-    width: 56.25rem;
     background-color: var(--cor-tercearia);
-    padding: 10px 20px;
+    padding: 15px 100px;
     border-radius: 5px;
-    justify-content: space-between;
+    display: flex;
     flex-direction: column;
-    gap: 15px;
+    font-size: 15px;
+    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
+    align-content: space-evenly;
 }
 .container__botoes a {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
     position: relative;
     left: 30px;
+    color: var(--cor-tercearia);
+    padding: 5px;
 
 }
 .container__botoes a:hover{
     background-color: var(--cor-secundaria);
+    color: var(--cor-primaria)
 
 }
-.container__botoes__input__nome{
-    background-color: var(--cor-primaria);
-    font-size: 20px;
-    align-items: center;
+.container__botoes__input__nome input{
+    font-size: 18px;
+    font-family: var(--fonte-texto);
 }
 .container__botoes__input__nome input::placeholder {
     color: var(--cor-tercearia);
-    width: 50%;
-    font-style: italic; /* Deixa o texto em itálico */
-    font-size: 14px; /* Ajusta o tamanho da fonte */
-    opacity: 1;
+    background-color: var(--cor-primaria);
+    width: auto;
+}
+.container__botoes__input__nome input:focus{
+    color: var(--cor-tercearia);
+    background-color: var(--cor-primaria);
+    width: auto;
 }
 .container__botoes__pronto{
-    background-color: var(--cor-secundaria);
     font-family: var(--fonte-formulario);
-    font-size: 20px;
 }
 .container__botoes__reset{
-    background-color: var(--botao-hover);
+
     align-items: center;
     
 }
@@ -183,7 +184,11 @@
     width: 80%;
     max-width: 600px;
 }
-
+.caixa__subtitulo{
+    font-family: var(--fonte-texto);
+    font-size: 30px;
+    color: var(--cor-primaria);
+}
 #listaNomes h2 {
     text-align: center;
     font-size: 1.5em;
